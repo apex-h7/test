@@ -12,6 +12,21 @@
   margin: 0 auto;
 }
 
+.buttons {
+  position: absolute;
+  display:flex;
+  top: 13px;
+  right: 20%;
+  gap: 20px;
+}
+
+.buttons button {
+  font-family: Montserrat;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: none;
+}
+
 .product-card-wrapper {
   display: flex;
   justify-content: center;
@@ -36,6 +51,7 @@
   left: 0;
   top: -408px;
   position: absolute;
+  pointer-events: none; 
 }
 
 .product-card {
@@ -116,4 +132,14 @@
 .product-card__price {
   font-weight: 400;
   font-size: 20px;
+}
+
+.purple-bg {
+  background-color: #b78bc9;
+  color: black
+}
+
+.pink-bg {
+  background-color: #f940af;
+  color: white
 }
