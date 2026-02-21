@@ -39,7 +39,7 @@ function openGoogle() {
 const mainTitleMouseover = document.querySelector(".product-card__main-title");
 
 mainTitleMouseover.addEventListener("mouseover", (event) => {
-  console.log("Выбери свой продукт")
+  console.log("Выбери свой продукт");
 });
 
 //  Изменение цвета кнопки
