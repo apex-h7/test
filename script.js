@@ -5,7 +5,7 @@ const firstProductCard = document.querySelector(".product-card");
 const blueHashColor = "#0000ff";
 
 recolorFirstCardButton.addEventListener("click", () => {
-  firstProductCard.style.backgroundColor = blueHashColor
+  firstProductCard.style.backgroundColor = blueHashColor;
 });
 
 //  Покраска всех карточек
@@ -31,7 +31,6 @@ function openGoogle() {
   
   if (answer === true) {
     window.open("https://google.com");
-  } else {
   }};
 
 //  Вывод элемента в консоль
@@ -39,7 +38,7 @@ function openGoogle() {
 const mainTitleMouseover = document.querySelector(".product-card__main-title");
 
 mainTitleMouseover.addEventListener("mouseover", (event) => {
-  console.log("Выбери свой продукт");
+  console.log(mainTitleMouseover.textContent);
 });
 
 //  Изменение цвета кнопки
@@ -50,4 +49,3 @@ recolorButton.classList.add("purple-bg");
 recolorButton.addEventListener("click", () => {
   recolorButton.classList.toggle("purple-bg");
 });
-
