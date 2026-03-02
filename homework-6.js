@@ -23,19 +23,19 @@ const carData = {
 carData.owner = profile;
 
 
-// Пункт 5. Написать функцию, принимающую авргкментом объектом пункт 4
+// Пункт 5. Написать функцию, принимающую аргументом объектом пункт 4
 
-const checkSpeed = (carData) => {
+const addSpeed = (carData) => {
   if (!carData.maxSpeed) {
     carData.maxSpeed = "200км/ч";
   }
 };
 
 
-// Пункт 6. Написать функцию, которая получает первым аргументом - объект, 
-// вторым-свойство
+// Пункт 6. Написать функцию, которая получает первым 
+// аргументом - объект, вторым-свойство
 
-const getProperty = (obj, key) => {
+const showProperty = (obj, key) => {
   console.log(obj [key]);
 };
 
@@ -93,25 +93,25 @@ const scienceFictionBooks = [
     genre: "Научная фантастика"
   }];
  
-  const library = [ ...classicsBooks, ...scienceFictionBooks];
+  const library = [...classicsBooks, ...scienceFictionBooks];
   
   
   // Пункт 10. Написать функцию, которая принимает массив 
   // сущностей с пункта 9 
 
-  const markRareBooks = (booksArray) => {
-    return booksArray.map((book) => {
-      let rareStatus;
-      if (book.year > 2000) {
-        rareStatus = true;
-      } else {
-        rareStatus  = false;
-      }
-      return {
-        ...book,
-        isRare: rareStatus,
-      };
-    });
-  };
+const getMarkRareBooks = (booksArray) => {
+  return booksArray.map((book) => {
+    let rareStatus;
+    if (book.year > 2000) {
+      rareStatus = true;
+    } else {
+      rareStatus  = false;
+    }
+    return {
+      ...book,
+      isRare: rareStatus,
+    };
+  });
+};
 
   const updatedLibrary = markRareBooks(library);
