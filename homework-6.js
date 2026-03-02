@@ -35,7 +35,7 @@ const addSpeed = (carData) => {
 // Пункт 6. Написать функцию, которая получает первым 
 // аргументом - объект, вторым-свойство
 
-const showProperty = (obj, key) => {
+const showObjectProperty = (obj, key) => {
   console.log(obj [key]);
 };
 
@@ -100,18 +100,10 @@ const scienceFictionBooks = [
   // сущностей с пункта 9 
 
 const getMarkRareBooks = (booksArray) => {
-  return booksArray.map((book) => {
-    let rareStatus;
-    if (book.year > 2000) {
-      rareStatus = true;
-    } else {
-      rareStatus  = false;
-    }
-    return {
-      ...book,
-      isRare: rareStatus,
-    };
-  });
+  return booksArray.map((book) => ({
+    ...book,
+    isRare: book.year > 2000,
+  }));
 };
 
-  const updatedLibrary = markRareBooks(library);
+  const updatedLibrary = getMarkRareBooks(library);
